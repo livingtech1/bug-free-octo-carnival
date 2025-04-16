@@ -1,76 +1,31 @@
-<!DOCTYPE html>
-<html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LivingTech</title>
-    <!-- Linking to External CSS (You can modify the styles later) -->
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LivingTech Dashboard</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
 
-    <!-- Optional: Add a favicon for your website -->
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <!-- Firebase SDKs (Non-module version) -->
+  <script src="https://www.gstatic.com/firebasejs/10.11.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.11.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.11.0/firebase-firestore.js"></script>
+
+  <script>
+    // Firebase configuration (Use your actual keys)
+    const firebaseConfig = {
+      apiKey: "AIzaSyDNsM34Cj-vunjRzp9OGnlvguqySdt1Q0s",
+      authDomain: "livingtech-c7a47.firebaseapp.com",
+      projectId: "livingtech-c7a47",
+      storageBucket: "livingtech-c7a47.appspot.com",
+      messagingSenderId: "136087622910",
+      appId: "1:136087622910:web:a8e320f0b0950a66a201af",
+      measurementId: "G-8ZQE6QZ872"
+    };
+
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+
+    // Optional: Initialize services
+    const auth = firebase.auth();
+    const db = firebase.firestore();
+  </script>
 </head>
-
-<body>
-    <!-- Header Section -->
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <!-- Home Section -->
-    <section id="home">
-        <div class="container">
-            <h1>Welcome to LivingTech!</h1>
-            <p>Your platform to boost your social media presence through exchange services.</p>
-            <a href="#services" class="cta-button">Learn More</a>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about">
-        <div class="container">
-            <h2>About Us</h2>
-            <p>At LivingTech, we connect users to grow their social media presence with ease. Our platform offers a variety of tools and services to help you gain more followers, likes, and engagement.</p>
-        </div>
-    </section>
-
-    <!-- Services Section -->
-    <section id="services">
-        <div class="container">
-            <h2>Our Services</h2>
-            <ul>
-                <li>Follower Exchange</li>
-                <li>Like and Comment Boost</li>
-                <li>Social Media Analytics</li>
-                <li>Referral Programs</li>
-            </ul>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact">
-        <div class="container">
-            <h2>Contact Us</h2>
-            <p>Have any questions? Reach out to us and we'll get back to you as soon as possible!</p>
-            <a href="mailto:info@livingtech.com">Email Us</a>
-        </div>
-    </section>
-
-    <!-- Footer Section -->
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 LivingTech. All rights reserved.</p>
-        </div>
-    </footer>
-
-</body>
-
-</html>
